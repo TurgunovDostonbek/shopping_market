@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="./img/Logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
   <title>Shopping Market</title>
 </head>
@@ -23,7 +26,7 @@
       </div>
 
       <div class="navbar__btn">
-        <img class="navbar__btn--img" src="./img/basket (2).png" alt="basket">
+        <img class="navbar__btn--img" src="./img/basket (2).png" alt="basket" onclick="transformToggle()">
         <span class="count">0</span>
       </div>
 
@@ -96,6 +99,7 @@
 
   <div class="cards__wrapper">
     <div class="cards__title">
+      <i onclick="transformToggle()" class="fa-solid fa-xmark"></i>
       <h1>Total price</h1>
       <p class="cards__title--price">0</p>
     </div>

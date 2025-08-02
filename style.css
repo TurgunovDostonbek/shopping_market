@@ -19,15 +19,15 @@ body {
   max-width: 1250px;
   width: 100%;
   margin: 0 auto;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .navbar__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0px;
+  padding: 20px 10px;
 }
 
 .navbar__btn {
@@ -250,18 +250,20 @@ body {
 
 /* ////  CARDS ///// */
 .cards__wrapper {
-  width: 40%;
+  width: 100vw;
+  /* ekran bo‘ylab */
+  max-width: 400px;
   height: 100vh;
-  background-color: #060F42;
-  /* background-color: #FFF; */
-  border-radius: 8px;
-  position: absolute;
+  position: fixed;
+  /* yaxshiroq variant absolute o‘rniga */
   top: 60px;
-  right: 10px;
-  z-index: 2;
-  transform: translateX(110%);
-  transition: all 1s ease;
-  overflow-y: hidden;
+  right: 0;
+  background-color: #060F42;
+  transform: translateX(100vw);
+  /* To‘liq ekrandan tashqariga chiqaradi */
+  transition: all 0.5s ease;
+  z-index: 1000;
+  border-radius: 8px;
   overflow-y: scroll;
 }
 
@@ -271,10 +273,16 @@ body {
 
 .cards__title {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.fa-xmark {
+  font-size: 15px;
+  color: #FFF;
+  text-align: center;
 }
 
 .cards__title h1 {
@@ -433,5 +441,26 @@ body {
 
   .categoria__cards {
     justify-content: center;
+  }
+}
+
+@media screen and (max-width: 505px) {
+  .section__card {
+    width: 330px;
+    height: 400px;
+  }
+
+  .section__card--title {
+    font-family: Lato;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 26px;
+    letter-spacing: 0%;
+    color: #000;
+  }
+
+  .section__card--img {
+    width: 200px;
+    object-fit: cover;
   }
 }

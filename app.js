@@ -244,6 +244,6 @@ function deleteCard(index) {
   document.querySelector(".count").textContent = count;
 }
 
-navbarBtnImg.addEventListener("click", () => {
+function transformToggle() {
   cardsWrapper.classList.toggle("transform__toggle");
-});
+}
